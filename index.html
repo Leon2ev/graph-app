@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="parent">
+    <div class="child">
+      <h1>Graph or not to graph</h1>
+      <p>
+        Application to check if a graph is red-blue colorable. A graph is 
+        red-blue colorable if two connected nodes have never the same color 
+        and the graph is a connected graph. A user should be able to enter 
+        a graph in a text area by typing some paths (a word is a node, a 
+        dash an edge and a new line or a comma a separation between paths).
+      </p>
+      <h4>Some examples:</h4>
+      <ul>
+        <li>
+          Input: a - b - c
+        </li>
+        <li>
+          Output: Is a connected and red-blue colorable graph
+        </li>
+        <br>
+        <li>
+          Input: a - b, f - g
+        </li>
+        <li>
+          Output: Is not a connected graph
+        </li>
+        <br>
+        <li>
+          Input: a - b - c - a
+        </li>
+        <li>
+          Output: Is a connected graph, but not red blue colorable
+        </li>
+        <br>
+        <li>
+          Input: a - b, c - d, b - c, a - d
+        </li>
+        <li>
+          Output: Is a connected and red-blue colorable graph
+        </li>
+      </ul>
+      <h4>
+        Definitions:
+      </h4>
+      <p>
+        Connected graph (from Wikipedia, 
+        <a href="https://en.wikipedia.org/wiki/Connectivity_(graph_theory)">
+          https://en.wikipedia.org/wiki/Connectivity_(graph_theory)
+        </a>)
+        A graph is said to be connected if every pair of vertices in the graph is connected. 
+        This means that there is a path between every pair of vertices. An undirected graph that is 
+        not connected is called disconnected. An undirected graph G is therefore disconnected if 
+        there exist two vertices in G such that no path in G has these vertices as endpoints. A 
+        graph with just one vertex is connected. An edgeless graph with two or more vertices is 
+        disconnected.
+      </p>
+    </div>
+    <div id="app" class="child">
+      <graph-validator></graph-validator>
+    </div>
+  </main>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+</html>
